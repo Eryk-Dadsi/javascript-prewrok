@@ -1,4 +1,4 @@
-var argButtonName, buttonPaper, buttonRock, buttonScissors;
+let argButtonName, buttonPaper, buttonRock, buttonScissors;
 
 
 
@@ -15,7 +15,7 @@ function buttonClicked(argButtonName) {
     console.log(argButtonName + ' został kliknięty');
 
 
-    var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
+    let computerMove, playerMove, randomNumber, playerInput;
 
     /**
      * Describe this function...
@@ -40,15 +40,22 @@ function buttonClicked(argButtonName) {
     function displayResult(argPlayerMove, argComputerMove) {
         console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
         if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
-            printMessage('Wygrywasz!');
+            printMessage(`Wygrywasz!`);
+
+
         } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
-            printMessage('Wygrywasz!');
+            printMessage(`Wygrywasz!`);
+            ;
+
         } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
-            printMessage('Wygrywasz!');
+            printMessage(`Wygrywasz!`);
+
+
         } else if (argPlayerMove == argComputerMove) {
             printMessage('Remis');
         } else {
             printMessage('Przegrywasz :(');
+
         }
         printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
     }
@@ -60,7 +67,10 @@ function buttonClicked(argButtonName) {
     computerMove = getMoveName(randomNumber);
     console.log('ruch komputera to: ' + computerMove);
     displayResult(playerMove, computerMove);
+    printMessage(`${playerScore} - ${computerScore}`);
+    printScore(`${playerScore} - ${computerScore}`);
 }
+
 
 buttonRock.addEventListener('click', function () { buttonClicked('kamień'); });
 buttonPaper.addEventListener('click', function () { buttonClicked('papier'); });

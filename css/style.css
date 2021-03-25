@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+}
+
+.messages {
+    font-weight: bold;
+}
+
+.buttons {
+    margin: 50px 0;
+}
+
