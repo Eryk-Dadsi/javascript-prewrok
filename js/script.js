@@ -1,4 +1,4 @@
-let argButtonName, buttonPaper, buttonRock, buttonScissors;
+let buttonPaper, buttonRock, buttonScissors;
 
 
 
@@ -15,7 +15,7 @@ function buttonClicked(argButtonName) {
     console.log(argButtonName + ' został kliknięty');
 
 
-    let computerMove, playerMove, randomNumber, playerInput;
+    let computerMove, playerMove, randomNumber;
 
     /**
      * Describe this function...
